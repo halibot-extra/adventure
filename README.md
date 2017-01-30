@@ -16,6 +16,6 @@ popd
 
 To add to your local halibot:
 ```shell
-halibot add github
+halibot add adventure
 ```
 
