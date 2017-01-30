@@ -8,7 +8,7 @@ How to use
 
 To install:
 ```shell
-halibot fetch github
+halibot fetch adventure
 pushd packages/adventure
 pip3 install -r requriements.txt
 popd
