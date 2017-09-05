@@ -1,17 +1,13 @@
 import re, os, hashlib
 import adventure, adventure.game
 from curses.ascii import isalnum
-from halibot import HalModule
+from halibot import HalModule, HalConfigurer
 
 class Adventure(HalModule):
 
-    options = {
-        'save-directory': {
-            'type'    : 'string',
-            'prompt'  : 'Directory to place save files in',
-            'default' : 'advent-saves',
-        },
-    }
+    class Configurer(HalConfigurer):
+        def configure(self):
+            self.optionString('save-directory', prompt='Directory to place save files in', default='advent-saves')
 
     class Context():
         def __init__(self):
