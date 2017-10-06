@@ -15,6 +15,14 @@ class Adventure(HalModule):
             self.game = adventure.game.Game()
             adventure.load_advent_dat(self.game)
 
+    topics = {
+        'adventure': '''Play colossal cave adventure!
+
+Usage:
+  !adventure begin
+  !adventure resume [save name]'''
+    }
+
     def init(self):
         self.context = {}
 
