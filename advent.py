@@ -81,7 +81,7 @@ Usage:
             self.context[ctx].running = False
 
         if not self.context[ctx].running:
-            if cmds[0] == '!adventure':
+            if len(cmds) > 0 and cmds[0] == '!adventure':
                 if len(cmds) >= 2:
                     if cmds[1] == 'begin':
                         self.context[ctx].game.start()
